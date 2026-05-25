@@ -319,9 +319,8 @@
         }
 
         .download-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            display: flex;
+            justify-content: center;
             margin-top: 2rem;
         }
 
@@ -332,6 +331,9 @@
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
         }
 
         .download-option:hover {
@@ -509,7 +511,6 @@
             <div class="nav-brand">Key Match</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#presentation">Presentation</a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="#legal">Legal</a></li>
             </ul>
@@ -522,35 +523,6 @@
             <img src="Key-match-icon-key.jpg" alt="Key Match Logo" class="logo">
             <h1>Key Match</h1>
             <div class="beta-badge">🧪 Beta Testing</div>
-        </section>
-
-        <!-- Presentation Hero Section -->
-        <section id="presentation" class="presentation-hero">
-            <div class="presentation-hero-content">
-                <h2>📊 Discover Key Match</h2>
-                <p>Explore our comprehensive presentation showcasing features, technology, and vision</p>
-                <a href="keymatch-presentation.pdf" target="_blank" class="presentation-button">
-                    View Full Presentation
-                </a>
-                <div class="presentation-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">24</span>
-                        <span class="stat-label">Slides</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Tech</span>
-                        <span class="stat-label">Stack Overview</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">AI</span>
-                        <span class="stat-label">Powered Matching</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">2026</span>
-                        <span class="stat-label">Roadmap</span>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Main Content Grid -->
@@ -601,14 +573,14 @@
         <section id="download" class="download-section">
             <h2>📲 Get Key Match Now</h2>
             <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
-                Choose your preferred installation method
+                Available on the Google Play Store
             </p>
 
             <div class="download-grid">
                 <div class="download-option">
                     <h3>🏪 Google Play Store</h3>
-                    <p style="margin: 1rem 0; opacity: 0.9;">Recommended for the best experience</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.keymatch.app" 
+                    <p style="margin: 1rem 0; opacity: 0.9;">Get the latest version with automatic updates</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.keymatch.app"
                        target="_blank" class="download-button">
                         Get it on Google Play
                     </a>
@@ -616,19 +588,6 @@
                         ✓ Automatic updates<br>
                         ✓ Verified by Google<br>
                         ✓ Easy installation
-                    </p>
-                </div>
-
-                <div class="download-option">
-                    <h3>📥 Direct APK</h3>
-                    <p style="margin: 1rem 0; opacity: 0.9;">Alternative download method</p>
-                    <a href="keymatch-v235.apk" class="download-button">
-                        Download APK (Android)
-                    </a>
-                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
-                        Version 134.10.9 (235)<br>
-                        Latest build • 44 MB<br>
-                        <em>Note: Enable "Unknown sources"</em>
                     </p>
                 </div>
             </div>
