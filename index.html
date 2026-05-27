@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Key Match - Connect through your keywords</title>
     <meta name="description" content="Key Match is a connection app that matches people by the keywords that define them — your interests, values and goals. Available on Google Play.">
+    <!-- Social / link previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Key Match — Match on what matters">
+    <meta property="og:description" content="Intelligent dating through AI and keywords. Connect with people through your interests, values and goals.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:url" content="https://keymatch.klasholmgren.se/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Key Match — Match on what matters">
+    <meta name="twitter:description" content="Intelligent dating through AI and keywords.">
+    <meta name="twitter:image" content="og-image.jpg">
     <!-- Favicon for browser tabs -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -240,13 +250,41 @@
         footer { text-align: center; padding: 2.5rem 0; color: var(--light-text); border-top: 1px solid rgba(44,62,80,0.1); }
         footer a { color: var(--primary-green); text-decoration: none; }
 
+        /* Video showcase */
+        .showcase {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            line-height: 0;
+        }
+        .showcase video { width: 100%; height: auto; display: block; }
+
+        /* Screenshot gallery */
+        .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+        .screen-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1rem 1rem 1.4rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .screen-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+        .screen-card img { width: 100%; height: auto; border-radius: 14px; display: block; }
+        .screen-card h3 { font-size: 1.1rem; margin-top: 1rem; }
+        .screen-card p { color: var(--light-text); font-size: 0.92rem; }
+
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-        .hero, .steps, .grid-2, .download, .legal-grid { animation: fadeInUp 0.6s ease-out; }
+        .hero, .steps, .grid-2, .download, .legal-grid, .showcase, .screens { animation: fadeInUp 0.6s ease-out; }
 
         @media (max-width: 820px) {
             .hero h1 { font-size: 2.5rem; }
             .hero .lead { font-size: 1.15rem; }
             .steps, .grid-2 { grid-template-columns: 1fr; }
+            .screens { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
             .nav-links { gap: 1rem; }
             .nav-links .hide-mobile { display: none; }
         }
@@ -259,6 +297,7 @@
             <div class="nav-brand"><img src="Key-match-icon-key.jpg" alt="">Key Match</div>
             <ul class="nav-links">
                 <li class="hide-mobile"><a href="#how">How it works</a></li>
+                <li class="hide-mobile"><a href="#screens">Screens</a></li>
                 <li class="hide-mobile"><a href="#about">About</a></li>
                 <li class="hide-mobile"><a href="#legal">Legal</a></li>
                 <li><a href="#download" class="nav-cta">Get the app</a></li>
@@ -288,6 +327,15 @@
             </div>
         </section>
 
+        <!-- Video showcase -->
+        <section id="demo">
+            <div class="showcase">
+                <video autoplay muted loop playsinline preload="metadata" poster="demo-poster.jpg">
+                    <source src="demo-loading.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
         <!-- How it works -->
         <section id="how">
             <h2 class="section-title">How it works</h2>
@@ -310,6 +358,29 @@
                     <div class="step-emoji">💬</div>
                     <h3>Start talking</h3>
                     <p>Break the ice over what you already have in common, with AI-powered chat help.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screens -->
+        <section id="screens">
+            <h2 class="section-title">Take a look</h2>
+            <p class="section-sub">A peek at Key Match — sign in, build a keyword-rich profile and let AI help you connect.</p>
+            <div class="screens">
+                <div class="screen-card">
+                    <img src="screen-login.jpg" alt="Key Match sign-in screen" loading="lazy">
+                    <h3>Sign in</h3>
+                    <p>Quick, secure access to your account.</p>
+                </div>
+                <div class="screen-card">
+                    <img src="screen-loading.jpg" alt="Key Match loading screen" loading="lazy">
+                    <h3>Built on keywords</h3>
+                    <p>Intelligent dating through AI and the words that define you.</p>
+                </div>
+                <div class="screen-card">
+                    <img src="screen-profile.jpg" alt="Key Match profile screen" loading="lazy">
+                    <h3>Your profile</h3>
+                    <p>Photos, bio and keywords that show who you really are.</p>
                 </div>
             </div>
         </section>
